@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhancing Natural Beauty | Professional Makeup Artist</title>
+  <meta name="description" content="Professional makeup artistry for the modern woman. Bridal, glam, natural beat, photoshoot makeup, hair installations, and eyelash extensions.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --olive-brown: #69573B;
+      --sage-green: #79904D;
+      --forest-green: #3E4B2A;
+      --charcoal: #2D2920;
+      --cream: #FAF7F2;
+      --beige: #E8DCC8;
+      --nude: #D4C4B0;
+      --warm-brown: #8B7355;
+      --deep-brown: #5C4A3A;
+      --gold: #C9A961;
+    }
+
+    body {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--charcoal);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Main Container */
+    .main-container {
+      min-height: 100vh;
+      background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Web_Photo_Editor-a515C6Ohpzg8p1NjXqQX00Yu3t6QXr.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1.5rem 5%;
+      background-color: rgba(250, 247, 242, 0.95);
+      backdrop-filter: blur(12px);
+      z-index: 50;
+      transition: all 0.3s ease;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--forest-green);
+      text-decoration: none;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      position: relative;
+      padding-bottom: 0.25rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--sage-green);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      background-color: rgba(250, 247, 242, 0.8);
+      backdrop-filter: blur(4px);
+      padding: 3rem;
+      border-radius: 0.5rem;
+    }
+
+    .hero h1 {
+      color: var(--forest-green);
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    .hero .subtitle {
+      font-size: 1.25rem;
+      color: var(--olive-brown);
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 1rem 3rem;
+      background-color: transparent;
+      border: 1px solid var(--forest-green);
+      color: var(--forest-green);
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--forest-green);
+      color: var(--cream);
+    }
+
+    /* Section Styles */
+    section {
+      padding: 6rem 5%;
+      max-width: 80rem;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.875rem, 4vw, 2.5rem);
+      color: var(--olive-brown);
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 1px;
+      background-color: var(--sage-green);
+    }
+
+    /* Services Section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background-color: white;
+      padding: 3rem;
+      text-align: center;
+      border: 1px solid transparent;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--sage-green);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border-color: var(--beige);
+    }
+
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background-color: var(--cream);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--sage-green);
+      margin-bottom: 1.5rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.25rem;
+      color: var(--forest-green);
+      margin-bottom: 0.75rem;
+    }
+
+    .service-card p {
+      font-size: 0.875rem;
+      color: var(--olive-brown);
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+      max-width: 600px;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      padding: 0.5rem 1.75rem;
+      background-color: transparent;
+      border: 1px solid var(--olive-brown);
+      color: var(--olive-brown);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Playfair Display', Georgia, serif;
+      text-decoration: none;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--sage-green);
+      border-color: var(--sage-green);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Portfolio Section */
+    #portfolio {
+      background-color: white;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1;
+      background-color: var(--beige);
+    }
+
+    .portfolio-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* About Section */
+    #about {
+      background-color: white;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    @media (min-width: 768px) {
+      .about-content {
+        flex-direction: row;
+      }
+    }
+
+    .about-image {
+      flex-shrink: 0;
+    }
+
+    .about-image-wrapper {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      border: 8px solid var(--cream);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+      transition: transform 0.4s ease;
+    }
+
+    .about-image-wrapper:hover {
+      transform: scale(1.02);
+    }
+
+    .about-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .about-text {
+        text-align: left;
+      }
+    }
+
+    .about-text p {
+      color: var(--olive-brown);
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+      max-width: 600px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--charcoal);
+      color: var(--beige);
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    footer p {
+      color: var(--nude);
+      font-size: 0.875rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: all 0.8s ease;
+    }
+
+    .scroll-animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        gap: 1.5rem;
+      }
+      
+      .hero-content {
+        padding: 2rem;
+      }
+      
+      section {
+        padding: 4rem 5%;
+      }
+    }
+
+    /* ==================== BOOKING MODAL STYLES ==================== */
+    
+    /* Modal Overlay */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(45, 41, 32, 0.6);
+      backdrop-filter: blur(4px);
+    }
+
+    .modal-content {
+      position: relative;
+      z-index: 10;
+      background-color: var(--cream);
+      width: 100%;
+      max-width: 56rem;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 2px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Close Button */
+    .modal-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 9999px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--olive-brown);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 20;
+    }
+
+    .modal-close:hover {
+      background-color: white;
+      color: var(--forest-green);
+    }
+
+    .modal-close svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    /* Modal Header */
+    .modal-header {
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 2rem 3rem;
+      text-align: center;
+      border-bottom: 1px solid var(--beige);
+    }
+
+    .modal-header-subtitle {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      color: rgba(105, 87, 59, 0.7);
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .modal-header h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.25rem;
+      color: var(--olive-brown);
+      margin-bottom: 0.75rem;
+    }
+
+    .modal-header p {
+      color: rgba(105, 87, 59, 0.7);
+      font-size: 0.875rem;
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+
+    /* Modal Body */
+    .modal-body {
+      padding: 2rem 3rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-header h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5rem;
+      color: var(--olive-brown);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-line {
+      width: 3rem;
+      height: 1px;
+      background-color: var(--sage-green);
+      margin: 0 auto;
+    }
+
+    /* Package Cards */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .package-card {
+      padding: 1.5rem;
+      background-color: white;
+      border: 1px solid var(--beige);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .package-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      border-color: rgba(105, 87, 59, 0.3);
+    }
+
+    .package-card.selected {
+      border-color: var(--forest-green);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .package-check {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 9999px;
+      border: 1px solid var(--beige);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .package-card.selected .package-check {
+      background-color: var(--forest-green);
+      border-color: var(--forest-green);
+    }
+
+    .package-check svg {
+      width: 0.75rem;
+      height: 0.75rem;
+      color: white;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .package-card.selected .package-check svg {
+      opacity: 1;
+    }
+
+    .package-icon {
+      width: 3rem;
+      height: 3rem;
+      background-color: var(--cream);
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: var(--sage-green);
+    }
+
+    .package-icon svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .package-card h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.25rem;
+      color: var(--olive-brown);
+      margin-bottom: 0.25rem;
+    }
+
+    .package-duration {
+      color: rgba(105, 87, 59, 0.6);
+      font-size: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .package-description {
+      color: rgba(105, 87, 59, 0.7);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .package-price {
+      padding-top: 1rem;
+      border-top: 1px solid var(--beige);
+    }
+
+    .package-price span {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5rem;
+      color: var(--olive-brown);
+    }
+
+    .package-price .price-unit {
+      font-size: 0.875rem;
+      color: rgba(105, 87, 59, 0.5);
+      margin-left: 0.25rem;
+    }
+
+    /* Add-ons */
+    .addons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      max-width: 32rem;
+      margin: 0 auto 3rem;
+    }
+
+    .addon-card {
+      padding: 1.25rem;
+      background-color: white;
+      border: 1px solid var(--beige);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .addon-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(105, 87, 59, 0.3);
+    }
+
+    .addon-card.selected {
+      border-color: var(--forest-green);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .addon-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+    }
+
+    .addon-header h4 {
+      font-weight: 500;
+      color: var(--olive-brown);
+    }
+
+    .addon-checkbox {
+      width: 1.25rem;
+      height: 1.25rem;
+      border: 1px solid var(--beige);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .addon-card.selected .addon-checkbox {
+      background-color: var(--forest-green);
+      border-color: var(--forest-green);
+    }
+
+    .addon-checkbox svg {
+      width: 0.75rem;
+      height: 0.75rem;
+      color: white;
+      opacity: 0;
+    }
+
+    .addon-card.selected .addon-checkbox svg {
+      opacity: 1;
+    }
+
+    .addon-description {
+      color: rgba(105, 87, 59, 0.6);
+      font-size: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .addon-price {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.125rem;
+      color: var(--olive-brown);
+    }
+
+    /* Summary Section */
+    .summary-box {
+      background-color: white;
+      padding: 2rem;
+      border: 1px solid var(--beige);
+      max-width: 36rem;
+      margin: 0 auto;
+    }
+
+    .summary-box h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5rem;
+      color: var(--olive-brown);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .summary-items {
+      margin-bottom: 1.5rem;
+      min-height: 60px;
+    }
+
+    .summary-placeholder {
+      text-align: center;
+      color: rgba(105, 87, 59, 0.5);
+      font-style: italic;
+      padding: 1rem;
+      border: 1px dashed var(--beige);
+      font-size: 0.875rem;
+    }
+
+    .summary-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--beige);
+    }
+
+    .summary-line.addon-line {
+      padding-left: 1rem;
+    }
+
+    .summary-line .item-name {
+      color: var(--olive-brown);
+      font-weight: 500;
+    }
+
+    .summary-line.addon-line .item-name {
+      font-weight: normal;
+      color: rgba(105, 87, 59, 0.7);
+      font-size: 0.875rem;
+    }
+
+    .summary-line .item-price {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--olive-brown);
+    }
+
+    .summary-line.addon-line .item-price {
+      font-size: 0.875rem;
+      color: rgba(105, 87, 59, 0.7);
+    }
+
+    .summary-totals {
+      border-top: 1px solid var(--beige);
+      padding-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .total-line {
+      display: flex;
+      justify-content: space-between;
+      color: rgba(105, 87, 59, 0.7);
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .total-line.grand-total {
+      color: var(--olive-brown);
+      font-size: 1.25rem;
+      padding-top: 0.5rem;
+    }
+
+    .total-line.grand-total span {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    /* Form Fields */
+    .booking-form {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background-color: transparent;
+      border: 1px solid var(--beige);
+      color: var(--olive-brown);
+      font-size: 0.875rem;
+      font-family: inherit;
+      margin-bottom: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--forest-green);
+    }
+
+    .form-input::placeholder {
+      color: rgba(105, 87, 59, 0.5);
+    }
+
+    /* Submit Button */
+    .btn-submit {
+      width: 100%;
+      padding: 1rem;
+      background-color: var(--forest-green);
+      color: var(--cream);
+      border: none;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    .btn-submit:hover:not(:disabled) {
+      background-color: var(--sage-green);
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    /* Confirmation View */
+    .confirmation-view {
+      padding: 3rem;
+      text-align: center;
+    }
+
+    .confirmation-icon {
+      width: 5rem;
+      height: 5rem;
+      background-color: var(--forest-green);
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
+    }
+
+    .confirmation-icon svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      color: var(--cream);
+    }
+
+    .confirmation-view h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.25rem;
+      color: var(--olive-brown);
+      margin-bottom: 1rem;
+    }
+
+    .confirmation-view p {
+      color: rgba(105, 87, 59, 0.8);
+      margin-bottom: 2rem;
+      max-width: 28rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Mobile Responsive for Modal */
+    @media (max-width: 768px) {
+      .modal-header {
+        padding: 1.5rem;
+      }
+
+      .modal-header h2 {
+        font-size: 1.75rem;
+      }
+
+      .modal-body {
+        padding: 1.5rem;
+      }
+
+      .packages-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .addons-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Enhancing Natural Beauty</h1>
+        <p class="subtitle">Professional makeup artistry for the modern woman</p>
+        <a href="#contact" class="btn-primary" onclick="openBookingModal(event)">Book Now</a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <div class="section-title scroll-animate">
+        <h2>Services</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card scroll-animate">
+          <div class="service-icon">&#10022;</div>
+          <h3>Bridal Makeup</h3>
+          <p>Timeless elegance for your special day. Includes trial session and day-of touch-up kit.</p>
+          <button class="btn-secondary" onclick="openBookingModalWithPackage('bridal')">Book Now</button>
+        </div>
+        <div class="service-card scroll-animate">
+          <div class="service-icon">&#10022;</div>
+          <h3>Glam Makeup</h3>
+          <p>Full coverage perfection for events, parties, and nights out. Bold, beautiful, unforgettable.</p>
+          <button class="btn-secondary" onclick="openBookingModalWithPackage('glam')">Book Now</button>
+        </div>
+        <div class="service-card scroll-animate">
+          <div class="service-icon">&#10022;</div>
+          <h3>Natural Beat</h3>
+          <p>Your skin, but better. Lightweight, breathable coverage that lets your natural beauty shine.</p>
+          <button class="btn-secondary" onclick="openBookingModalWithPackage('natural')">Book Now</button>
+        </div>
+        <div class="service-card scroll-animate">
+          <div class="service-icon">&#10022;</div>
+          <h3>Photoshoot Makeup</h3>
+          <p>Camera-ready looks for editorial, headshots, and content creation. HD finish guaranteed.</p>
+          <button class="btn-secondary" onclick="openBookingModalWithPackage('photoshoot')">Book Now</button>
+        </div>
+        <div class="service-card scroll-animate">
+          <div class="service-icon">&#10022;</div>
+          <h3>Hair Installations</h3>
+          <p>Professional wig and weave installations, including custom styling, blending, and secure application for a flawless, natural look.</p>
+          <button class="btn-secondary" onclick="openBookingModal()">Book Now</button>
+        </div>
+        <div class="service-card scroll-animate">
+          <div class="service-icon">&#10022;</div>
+          <h3>Eyelash Extensions</h3>
+          <p>Custom lash applications from natural to dramatic volume. Premium synthetic or mink options for lasting, eye-enhancing beauty.</p>
+          <button class="btn-secondary" onclick="openBookingModal()">Book Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <div class="section-title scroll-animate">
+        <h2>Portfolio</h2>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item scroll-animate">
+          <video src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/model%201-6azGaWswCOYLFLCJdVBzBIcKz5WynJ.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="portfolio-item scroll-animate">
+          <video src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/model%202-qGBRgigjLMbG7uKSiSCgUhO3Dajjl9.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="portfolio-item scroll-animate">
+          <video src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/model%203-XdF5D8rGiM9JSembt5ZhngVoIYu6NH.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="portfolio-item scroll-animate">
+          <video src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/model%204-y55nEiLnOyEb7gJVUOShOvtZUdkNwQ.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="portfolio-item scroll-animate">
+          <video src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/model%205-VJ1ULXF3YoP6MZ8AAUPdjSL8O45Ioz.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="portfolio-item scroll-animate">
+          <video src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/new%20model%206%20-tngTEBTQ1jxRQrMwTagzzcxCsTE2QF.mp4" autoplay loop muted playsinline></video>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="section-title scroll-animate">
+        <h2>About Me</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-image scroll-animate">
+          <div class="about-image-wrapper">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/brave_screenshot_www.instagram.com-AIBEWXL5aPWLhJ0Ef0NsQ6nD3EbNWO.png" alt="Professional makeup artist portrait">
+          </div>
+        </div>
+        <div class="about-text scroll-animate">
+          <p>With over eight years of experience in the beauty industry, I specialize in creating looks that celebrate and enhance your natural features. My approach combines technical expertise with an intuitive understanding of skin tones, textures, and individual beauty.</p>
+          <p>Based in the heart of the city, I've had the privilege of working with diverse clients for weddings, editorial shoots, and special events. My mission is simple: to make every woman feel confident, radiant, and authentically herself.</p>
+          <p>Whether you're looking for a soft, natural glow or full glam transformation, I bring passion, precision, and a calming presence to every appointment.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Natural Beauty Studio. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- ==================== BOOKING MODAL ==================== -->
+  <div id="bookingModal" class="modal-overlay">
+    <div class="modal-backdrop" onclick="closeBookingModal()"></div>
+    
+    <div class="modal-content">
+      <!-- Close Button -->
+      <button class="modal-close" onclick="closeBookingModal()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <!-- Booking Form View -->
+      <div id="bookingFormView">
+        <!-- Header -->
+        <div class="modal-header">
+          <p class="modal-header-subtitle">Reservations</p>
+          <h2>Select Your Experience</h2>
+          <p>Choose from our curated selection of treatments designed to enhance your natural beauty.</p>
+        </div>
+
+        <div class="modal-body">
+          <!-- Packages -->
+          <div class="mb-12">
+            <div class="section-header">
+              <h3>Services</h3>
+              <div class="section-line"></div>
+            </div>
+            
+            <div class="packages-grid">
+              <!-- Natural Beat -->
+              <div class="package-card" data-package-id="natural" onclick="selectPackage('natural')">
+                <div class="package-check">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="package-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </div>
+                <h4>Natural Beat</h4>
+                <p class="package-duration">60 min</p>
+                <p class="package-description">Your skin, but better. Lightweight, breathable coverage that enhances your natural beauty.</p>
+                <div class="package-price">
+                  <span>$150</span>
+                  <span class="price-unit">/ session</span>
+                </div>
+              </div>
+
+              <!-- Glam Makeup -->
+              <div class="package-card" data-package-id="glam" onclick="selectPackage('glam')">
+                <div class="package-check">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="package-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>
+                </div>
+                <h4>Glam Makeup</h4>
+                <p class="package-duration">90 min</p>
+                <p class="package-description">Full coverage perfection for events, parties, and nights out. Bold, beautiful, unforgettable.</p>
+                <div class="package-price">
+                  <span>$250</span>
+                  <span class="price-unit">/ session</span>
+                </div>
+              </div>
+
+              <!-- Bridal Collection -->
+              <div class="package-card" data-package-id="bridal" onclick="selectPackage('bridal')">
+                <div class="package-check">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="package-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                </div>
+                <h4>Bridal Collection</h4>
+                <p class="package-duration">3 hours</p>
+                <p class="package-description">Timeless elegance for your special day. Includes trial session and day-of touch-up kit.</p>
+                <div class="package-price">
+                  <span>$650</span>
+                  <span class="price-unit">/ session</span>
+                </div>
+              </div>
+
+              <!-- Photoshoot Ready -->
+              <div class="package-card" data-package-id="photoshoot" onclick="selectPackage('photoshoot')">
+                <div class="package-check">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div class="package-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.476.476L2.834 21.783a.5.5 0 0 1-.798-.519l2.834-10.246a1 1 0 0 1 .476-.476L11.562 3.266Z"></path><path d="M5 21h14"></path></svg>
+                </div>
+                <h4>Photoshoot Ready</h4>
+                <p class="package-duration">2 hours</p>
+                <p class="package-description">Camera-ready looks for editorial, headshots, and content creation. HD finish guaranteed.</p>
+                <div class="package-price">
+                  <span>$300</span>
+                  <span class="price-unit">/ session</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add-ons -->
+          <div class="mb-12">
+            <div class="section-header">
+              <h3>Enhancements</h3>
+              <div class="section-line"></div>
+            </div>
+            
+            <div class="addons-grid">
+              <!-- Lash Enhancement -->
+              <div class="addon-card" data-addon-id="lash" onclick="toggleAddon('lash')">
+                <div class="addon-header">
+                  <h4>Lash Enhancement</h4>
+                  <div class="addon-checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                </div>
+                <p class="addon-description">Strip lash application</p>
+                <span class="addon-price">+$35</span>
+              </div>
+
+              <!-- Hair Styling -->
+              <div class="addon-card" data-addon-id="hair" onclick="toggleAddon('hair')">
+                <div class="addon-header">
+                  <h4>Hair Styling</h4>
+                  <div class="addon-checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                </div>
+                <p class="addon-description">Basic styling included</p>
+                <span class="addon-price">+$75</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Summary & Form -->
+          <div class="summary-box">
+            <h3>Booking Summary</h3>
+            
+            <div class="summary-items" id="summaryItems">
+              <p class="summary-placeholder">Please select a service to continue</p>
+            </div>
+
+            <div class="summary-totals">
+              <div class="total-line">
+                <span>Subtotal</span>
+                <span id="subtotalPrice">$0</span>
+              </div>
+              <div class="total-line">
+                <span>Tax (8%)</span>
+                <span id="taxPrice">$0.00</span>
+              </div>
+              <div class="total-line grand-total">
+                <span>Total</span>
+                <span id="totalPrice">$0.00</span>
+              </div>
+            </div>
+
+            <div class="booking-form">
+              <input type="text" id="customerName" class="form-input" placeholder="Your Name" oninput="validateForm()">
+              <input type="email" id="customerEmail" class="form-input" placeholder="Email Address" oninput="validateForm()">
+              <input type="date" id="bookingDate" class="form-input" oninput="validateForm()">
+            </div>
+
+            <button id="submitBtn" class="btn-submit" onclick="submitBooking()" disabled>
+              Confirm Booking
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Confirmation View -->
+      <div id="confirmationView" class="confirmation-view" style="display: none;">
+        <div class="confirmation-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h2>Booking Confirmed</h2>
+        <p>Thank you for choosing us. We have sent a confirmation to your email with all the details.</p>
+        <button class="btn-primary" onclick="closeBookingModal()" style="border: none; background-color: var(--forest-green); color: var(--cream);">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Scroll Animation Observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('.scroll-animate').forEach((el) => {
+      observer.observe(el);
+    });
+
+    // ==================== BOOKING MODAL LOGIC ====================
+    
+    const packages = {
+      natural: { name: "Natural Beat", price: 150 },
+      glam: { name: "Glam Makeup", price: 250 },
+      bridal: { name: "Bridal Collection", price: 650 },
+      photoshoot: { name: "Photoshoot Ready", price: 300 }
+    };
+
+    const addons = {
+      lash: { name: "Lash Enhancement", price: 35 },
+      hair: { name: "Hair Styling", price: 75 }
+    };
+
+    let selectedPackage = null;
+    let selectedAddons = new Set();
+
+    function openBookingModal(event) {
+      if (event) event.preventDefault();
+      document.getElementById('bookingModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function openBookingModalWithPackage(packageId) {
+      openBookingModal();
+      selectPackage(packageId);
+    }
+
+    function closeBookingModal() {
+      document.getElementById('bookingModal').classList.remove('active');
+      document.body.style.overflow = '';
+      resetBookingForm();
+    }
+
+    function resetBookingForm() {
+      selectedPackage = null;
+      selectedAddons.clear();
+      
+      // Reset UI
+      document.querySelectorAll('.package-card').forEach(card => {
+        card.classList.remove('selected');
+      });
+      document.querySelectorAll('.addon-card').forEach(card => {
+        card.classList.remove('selected');
+      });
+      
+      document.getElementById('customerName').value = '';
+      document.getElementById('customerEmail').value = '';
+      document.getElementById('bookingDate').value = '';
+      
+      document.getElementById('bookingFormView').style.display = 'block';
+      document.getElementById('confirmationView').style.display = 'none';
+      
+      updateSummary();
+      validateForm();
+    }
+
+    function selectPackage(packageId) {
+      selectedPackage = packageId;
+      
+      // Update UI
+      document.querySelectorAll('.package-card').forEach(card => {
+        card.classList.remove('selected');
+      });
+      document.querySelector(`[data-package-id="${packageId}"]`).classList.add('selected');
+      
+      updateSummary();
+      validateForm();
+    }
+
+    function toggleAddon(addonId) {
+      if (selectedAddons.has(addonId)) {
+        selectedAddons.delete(addonId);
+      } else {
+        selectedAddons.add(addonId);
+      }
+      
+      // Update UI
+      const card = document.querySelector(`[data-addon-id="${addonId}"]`);
+      if (selectedAddons.has(addonId)) {
+        card.classList.add('selected');
+      } else {
+        card.classList.remove('selected');
+      }
+      
+      updateSummary();
+    }
+
+    function updateSummary() {
+      const summaryItems = document.getElementById('summaryItems');
+      
+      if (!selectedPackage) {
+        summaryItems.innerHTML = '<p class="summary-placeholder">Please select a service to continue</p>';
+        updatePrices(0);
+        return;
+      }
+      
+      let html = '';
+      
+      // Package line
+      const pkg = packages[selectedPackage];
+      html += `
+        <div class="summary-line">
+          <span class="item-name">${pkg.name}</span>
+          <span class="item-price">$${pkg.price}</span>
+        </div>
+      `;
+      
+      // Addon lines
+      selectedAddons.forEach(addonId => {
+        const addon = addons[addonId];
+        html += `
+          <div class="summary-line addon-line">
+            <span class="item-name">+ ${addon.name}</span>
+            <span class="item-price">$${addon.price}</span>
+          </div>
+        `;
+      });
+      
+      summaryItems.innerHTML = html;
+      
+      // Calculate totals
+      let subtotal = pkg.price;
+      selectedAddons.forEach(addonId => {
+        subtotal += addons[addonId].price;
+      });
+      
+      updatePrices(subtotal);
+    }
+
+    function updatePrices(subtotal) {
+      const tax = subtotal * 0.08;
+      const total = subtotal + tax;
+      
+      document.getElementById('subtotalPrice').textContent = `$${subtotal}`;
+      document.getElementById('taxPrice').textContent = `$${tax.toFixed(2)}`;
+      document.getElementById('totalPrice').textContent = `$${total.toFixed(2)}`;
+    }
+
+    function validateForm() {
+      const name = document.getElementById('customerName').value.trim();
+      const email = document.getElementById('customerEmail').value.trim();
+      const date = document.getElementById('bookingDate').value;
+      
+      const isValid = selectedPackage && name && email && date;
+      document.getElementById('submitBtn').disabled = !isValid;
+    }
+
+    function submitBooking() {
+      document.getElementById('bookingFormView').style.display = 'none';
+      document.getElementById('confirmationView').style.display = 'block';
+    }
+
+    // Close modal on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeBookingModal();
+      }
+    });
+  </script>
+</body>
+</html>
